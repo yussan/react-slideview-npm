@@ -23,6 +23,11 @@ const Home = props => (
 )
 ```
 
+## Core 
+- [react](https://www.npmjs.com/package/react)
+- [props-types](https://www.npmjs.com/package/prop-types)
+- [styled-components](https://www.styled-components.com/)
+
 ## Used by
 - https://kompetisi.id 
 - https://sebangsa.com
