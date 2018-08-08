@@ -980,7 +980,11 @@ var ExampleApp = function ExampleApp(props) {
     ),
     _react2.default.createElement(
       _SlideView2.default,
-      { id: "example-slider-1", style: { width: "700px" } },
+      {
+        id: "example-slider-1",
+        style: { width: "700px" },
+        navigation: true
+      },
       _react2.default.createElement(
         "div",
         { style: dummyStyle },
@@ -8115,7 +8119,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _templateObject = _taggedTemplateLiteral(["\n  position: relative;\n\n  .slider-items {\n    width: 100%;\n    display: -webkit-inline-box;\n    transition: all 0.5s ease;\n    overflow: hidden;\n  }\n\n  .slider-navigation {\n    position: absolute;\n    width: 100%;\n    float: left;\n    bottom: 0;\n    ul {\n      padding: 0;\n      li {\n        list-style: none;\n        display: inline-block;\n        margin: 0 5px;\n        cursor: pointer;\n      }\n    }\n  }\n"], ["\n  position: relative;\n\n  .slider-items {\n    width: 100%;\n    display: -webkit-inline-box;\n    transition: all 0.5s ease;\n    overflow: hidden;\n  }\n\n  .slider-navigation {\n    position: absolute;\n    width: 100%;\n    float: left;\n    bottom: 0;\n    ul {\n      padding: 0;\n      li {\n        list-style: none;\n        display: inline-block;\n        margin: 0 5px;\n        cursor: pointer;\n      }\n    }\n  }\n"]);
+var _templateObject = _taggedTemplateLiteral(["\n  position: relative;\n\n  .slider-items {\n    width: 100%;\n    display: -webkit-inline-box;\n    transition: all 0.5s ease;\n    overflow: hidden;\n  }\n\n  .slider-navigation {\n    position: absolute;\n    width: 100%;\n    float: left;\n    bottom: 0;\n    text-align: center;\n    ul {\n      padding: 0;\n      li {\n        list-style: none;\n        display: inline-block;\n        margin: 0 5px;\n        cursor: pointer;\n      }\n    }\n\n    span.dot-navigation {\n      display: block;\n      &.dot-navigation__active {\n        background: #FFF;\n      }\n      padding: 5px;\n      border-radius: 40px;\n      border: 2px solid #FFF;\n    }\n  }\n"], ["\n  position: relative;\n\n  .slider-items {\n    width: 100%;\n    display: -webkit-inline-box;\n    transition: all 0.5s ease;\n    overflow: hidden;\n  }\n\n  .slider-navigation {\n    position: absolute;\n    width: 100%;\n    float: left;\n    bottom: 0;\n    text-align: center;\n    ul {\n      padding: 0;\n      li {\n        list-style: none;\n        display: inline-block;\n        margin: 0 5px;\n        cursor: pointer;\n      }\n    }\n\n    span.dot-navigation {\n      display: block;\n      &.dot-navigation__active {\n        background: #FFF;\n      }\n      padding: 5px;\n      border-radius: 40px;\n      border: 2px solid #FFF;\n    }\n  }\n"]);
 
 var _react = __webpack_require__(1);
 
@@ -8241,7 +8245,7 @@ var SlideView = function (_Component) {
           { className: "slider-items" },
           this.props.children
         ),
-        this.state.elSlider && this.state.elSlider.childElementCount > 1 ? _react2.default.createElement(
+        this.props.navigation && this.state.elSlider && this.state.elSlider.childElementCount > 1 ? _react2.default.createElement(
           "div",
           { className: "slider-navigation" },
           _react2.default.createElement(
@@ -8264,7 +8268,7 @@ var SlideView = function (_Component) {
                     }
                   },
                   _react2.default.createElement("span", {
-                    className: _this4.state.active === n ? "dot-active" : "dot-notactive"
+                    className: _this4.state.active === n ? "dot-navigation dot-navigation__active" : "dot-navigation"
                   })
                 ));
               };

@@ -17,6 +17,7 @@ const SlideViewWrapper = Styled.div`
     width: 100%;
     float: left;
     bottom: 0;
+    text-align: center;
     ul {
       padding: 0;
       li {
@@ -25,6 +26,16 @@ const SlideViewWrapper = Styled.div`
         margin: 0 5px;
         cursor: pointer;
       }
+    }
+
+    span.dot-navigation {
+      display: block;
+      &.dot-navigation__active {
+        background: #FFF;
+      }
+      padding: 5px;
+      border-radius: 40px;
+      border: 2px solid #FFF;
     }
   }
 `
@@ -39,15 +50,18 @@ class SlideView extends Component {
   }
 
   componentDidMount() {
-    this.setState({
-      elSlider: document.querySelector(`#${this.props.id} .slider-items`)
-    }, () => {
-      if (this.props.auto) {
-        this.sliderInterval = setInterval(() => {
-          this.move("right")
-        }, this.props.speed)
+    this.setState(
+      {
+        elSlider: document.querySelector(`#${this.props.id} .slider-items`)
+      },
+      () => {
+        if (this.props.auto) {
+          this.sliderInterval = setInterval(() => {
+            this.move("right")
+          }, this.props.speed)
+        }
       }
-    })
+    )
   }
 
   componentWillUnmount() {
@@ -106,7 +120,7 @@ class SlideView extends Component {
         style={this.props.style}
       >
         <div className="slider-items">{this.props.children}</div>
-        {this.state.elSlider && this.state.elSlider.childElementCount > 1 ? (
+        {this.props.navigation && this.state.elSlider && this.state.elSlider.childElementCount > 1 ? (
           <div className="slider-navigation">
             <ul>
               {(() => {
@@ -135,8 +149,8 @@ class SlideView extends Component {
                       <span
                         className={
                           this.state.active === n
-                            ? "dot-active"
-                            : "dot-notactive"
+                            ? "dot-navigation dot-navigation__active"
+                            : "dot-navigation"
                         }
                       />
                     </li>

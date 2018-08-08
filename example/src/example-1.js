@@ -10,12 +10,14 @@ const dummyStyle = {
   background: "gray"
 }
 
-
-
 const ExampleApp = props => (
   <div>
     <h1>This is Example App of SlideView</h1>
-    <SlideView id="example-slider-1" style={{width:"700px"}}>
+    <SlideView
+      id="example-slider-1"
+      style={{ width: "700px" }}
+      navigation={true}
+    >
       <div style={dummyStyle}>1</div>
       <div style={dummyStyle}>2</div>
       <div style={dummyStyle}>3</div>

@@ -14,10 +14,10 @@ import React from "react"
 import Slider from "react-slideview"
 const Home = props => (
   <div>
-    <Slider>
-      <div> content 1 </div>
-      <div> content 2 </div>
-      <div> content 3 </div>
+    <Slider className="homeslider">
+      <div className="homeslider-content"> content 1 </div>
+      <div className="homeslider-content"> content 2 </div>
+      <div className="homeslider-content"> content 3 </div>
     </Slider>
   </div>
 )

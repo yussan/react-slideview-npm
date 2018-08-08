@@ -1,0 +1,9 @@
+.git/
+src/
+node_modules
+*.log
+.babelrc
+.vscode
+.prettierrc
+webpack.config.js
+example
