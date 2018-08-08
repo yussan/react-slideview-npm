@@ -7,7 +7,9 @@
     "test": "yarn test",
     "watch:example": "NODE_ENV=development webpack --watch --progress",
     "build:example": "rimraf example/dist && NODE_ENV=production webpack --progress",
-    "build:prod": "rimraf dist && NODE_ENV=production babel src -d dist"
+    "build:prod": "rimraf dist && NODE_ENV=production babel src -d dist",
+    "release:beta": "standard-version -p beta && npm publish",
+    "release": "standard-version && npm publish"
   },
   "repository": {
     "type": "git",
