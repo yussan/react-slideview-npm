@@ -8245,7 +8245,7 @@ var SlideView = function (_Component) {
           { className: "slider-items" },
           this.props.children
         ),
-        this.props.navigation && this.state.elSlider && this.state.elSlider.childElementCount > 1 ? _react2.default.createElement(
+        this.props.dots && this.state.elSlider && this.state.elSlider.childElementCount > 1 ? _react2.default.createElement(
           "div",
           { className: "slider-navigation" },
           _react2.default.createElement(
@@ -8292,8 +8292,8 @@ SlideView.defaultProps = {
   id: "react-slideview",
   className: "",
   style: {},
-  dots: false,
-  navigation: false,
+  dots: true,
+  navigation: true,
   auto: true,
   speed: 2000
 };

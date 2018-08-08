@@ -120,7 +120,7 @@ class SlideView extends Component {
         style={this.props.style}
       >
         <div className="slider-items">{this.props.children}</div>
-        {this.props.navigation && this.state.elSlider && this.state.elSlider.childElementCount > 1 ? (
+        {this.props.dots && this.state.elSlider && this.state.elSlider.childElementCount > 1 ? (
           <div className="slider-navigation">
             <ul>
               {(() => {
@@ -171,8 +171,8 @@ SlideView.defaultProps = {
   id: "react-slideview",
   className: "",
   style: {},
-  dots: false,
-  navigation: false,
+  dots: true,
+  navigation: true,
   auto: true,
   speed: 2000
 }
