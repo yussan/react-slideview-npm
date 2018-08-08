@@ -1,4 +1,4 @@
-# [WIP] React Slideview 
+# react-slideview 
 
 Lightweight and customizable React component to build slide view. https://www.npmjs.com/package/react-slideview
 
@@ -14,14 +14,17 @@ import React from "react"
 import Slider from "react-slideview"
 const Home = props => (
   <div>
-    <Slider className="homeslider">
-      <div className="homeslider-content"> content 1 </div>
-      <div className="homeslider-content"> content 2 </div>
-      <div className="homeslider-content"> content 3 </div>
+    <Slider className="your-sliderwrapper-class">
+      <div className="your-slideritem-class"> content 1 </div>
+      <div className="your-slideritem-class"> content 2 </div>
+      <div className="your-slideritem-class"> content 3 </div>
     </Slider>
   </div>
 )
 ```
+
+## Demo 
+-
 
 ## Core 
 - [react](https://www.npmjs.com/package/react)

@@ -1,1 +1,1 @@
-export { default as ReactSlideView } from "../src/components/SlideView"
+export { default as ReactSlideView } from "./components/SlideView"
