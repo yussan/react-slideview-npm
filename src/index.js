@@ -1,1 +1,3 @@
-export { default as ReactSlideView } from "./components/SlideView"
+import Slider from "./components/SlideView"
+
+export default Slider

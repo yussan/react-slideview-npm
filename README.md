@@ -1,8 +1,17 @@
 # react-slideview 
 
-Lightweight and customizable React component to build slide view. https://www.npmjs.com/package/react-slideview
+Lightweight and customizable React component to build slide view. https://www.npmjs.com/package/react-slideview.
 
-## How to use
+8Kb of size, no external dependecies.
+
+
+## Demo 
+please follow this link https://z2q3o48m1x.codesandbox.io/
+
+
+## Docs
+
+### How to use
 Install using Yarn / NPM
 ```
 yarn add react-slideview
@@ -23,8 +32,14 @@ const Home = props => (
 )
 ```
 
-## Demo 
--
+## Available props 
+- id (string) : mandatory,
+- className (string),
+- style (object) : based on react,
+- dots (boolean): default true,
+- navigation (boolean): default false,
+- auto (boolean): default false,
+- speed (number): default 2000ms
 
 ## Core 
 - [react](https://www.npmjs.com/package/react)
