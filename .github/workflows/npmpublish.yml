@@ -29,6 +29,6 @@ jobs:
           node-version: 10
           registry-url: https://npm.pkg.github.com/
           scope: '@yussan'
-      - run: npm install --registry https://registry.npmjs.org && npm run build:propd && npm publish
+      - run: npm install --registry https://registry.npmjs.org && npm run build:prod && npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
