@@ -1,5 +1,5 @@
 {
-  "name": "@yussan/react-slideview",
+  "name": "react-slideview",
   "version": "0.1.2",
   "description": "Slide view generator for ReactJS",
   "main": "dist/index.js",
@@ -10,9 +10,6 @@
     "build:prod": "rimraf dist && NODE_ENV=production babel src -d dist",
     "release:beta": "npm run build:prod && standard-version -p beta && npm publish",
     "release": "npm run build:prod && standard-version && npm publish"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
   },
   "repository": {
     "type": "git",
